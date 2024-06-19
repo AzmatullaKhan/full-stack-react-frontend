@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      HI
+      HELLO FROM APP
     </>
   );
 }
