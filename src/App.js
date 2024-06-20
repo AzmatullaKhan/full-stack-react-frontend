@@ -3,9 +3,7 @@ import { Home } from './pages/home'
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/"  element={<Home />}/>
-      </Routes>
+      HELLO FROM APP
     </>
   );
 }
