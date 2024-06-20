@@ -3,7 +3,9 @@ import { Home } from './pages/home'
 function App() {
   return (
     <>
-      HELLO FROM APP
+      <Routes>
+        <Route path="/"  element={<Home />}/>
+      </Routes>
     </>
   );
 }
