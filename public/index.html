@@ -8,7 +8,6 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>React App</title>
   </head>
   <style>
@@ -16,12 +15,16 @@
       font-family: monospace;
       scroll-behavior: smooth;
       box-sizing: border-box;
-      color:#fff;
+    }
+    *::-webkit-scrollbar{
+      display: none;
     }
     body{
       display: flex;
       justify-content: center;
       background-color: #000;
+      margin: 0;
+      padding: 0;
     }
   </style>
   <body>
