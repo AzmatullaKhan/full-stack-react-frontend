@@ -11,7 +11,6 @@ img{
 
 .nav_container_one{
     height:70px;
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +44,7 @@ img{
     overflow: hidden;
     transition: all 1.5s ease-out 0s;
     animation: nav_container_one_button-animation 1s ease-out 0s;
+    animation-iteration-count: 1;
 
 }
 .nav_container_one_button:hover{
@@ -132,7 +132,6 @@ img{
     height: 770px;
     width:1492px;
     padding: 0px 0px;
-    /* border: 1px solid; */
     margin-top:10px;
 }
 
@@ -180,7 +179,6 @@ img{
     border-radius: 12px;
     background-color: #fff;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     padding: 12px;
@@ -249,7 +247,7 @@ img{
     position: absolute;
     top: 0;
     margin-top: -155px;
-    margin-left: 940px;
+    margin-left: 640px;
     height:500px;
     width:250px;
     border-radius: 12px;
@@ -310,7 +308,6 @@ img{
     border-radius: 12px;
     background-color: #fff;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     padding: 12px;
@@ -376,4 +373,83 @@ img{
 .signup_container_two_button:hover{
     background-color: #4c1489;
     color: #fff;
+}
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+.help_container_one{
+    height: 850px;
+    width:1492px;
+    padding: 0px 0px;
+    background-color: #fff;
+    background-size: cover;
+    backdrop-filter: grayscale(10px);
+}
+
+.help_container_two{
+    height: 770px;
+    width:1492px;
+    padding: 0px 0px;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.help_container_three{
+    height: 700px;
+    width:550px;
+    padding: 0px 0px;
+    background-color: transparent;
+    border: 4px solid #daccfe;
+    border-radius: 22px;
+    margin: 0px 40px;
+    padding: 20px 40px;
+}
+
+.help_container_messageSent{
+    border: 2px solid #3cc8e9;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    line-height: 22px;
+    margin-left: auto;
+}
+
+.help_container_messageReceived{
+    border: 2px solid #daccfe;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    line-height: 22px;
+}
+
+.help_container_questions_div{
+    width:535px;
+    height:160px;
+    overflow-y: scroll;
+    position: fixed;
+    top:650px;
+    padding: 5px 12px;
+    margin-left: -38px;
+}
+.help_container_questions_div_p{
+    line-height: 36px;
+}
+.help_container_questions_div_span{
+    padding: 6px 4px;
+    border: 1px solid;
+    border-radius: 22px;
+    margin: 20px 0px;
+    cursor: pointer;
 }

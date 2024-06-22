@@ -1,3 +1,4 @@
+import './allPages.css'
 import { useNavigate } from 'react-router-dom'
 
 export const SignUp=()=>{
@@ -5,6 +6,17 @@ export const SignUp=()=>{
     let navigate= useNavigate();
     const handleHomeClick=()=>{
         navigate('/')
+    }
+
+    function getTodayDate(){
+        let d=new Date();
+        let today=d.getFullYear()+"-";
+        if(d.getMonth()<=8)
+            today+="0"+(Number(d.getMonth())+1)+"-"
+        else
+            today+=(Number(d.getMonth())+1)+"-"
+        today+=d.getDate();
+        return today;
     }
     
     return(
@@ -30,7 +42,7 @@ export const SignUp=()=>{
                 </div>
                 <div style={{display:'flex', flexDirection:'column', justifyContent:"flex-start",width:"100%",margin:"10px 0px", height:"70px"}}>
                     <label className='signup_container_two_label'>Date Of Birth</label>
-                    <input type="date" className='signup_container_two_input_small' placeholder='***** Enter your mobile number *****'/>
+                    <input type="date" className='signup_container_two_input_small' max={getTodayDate()}/>
                 </div>
                 <div style={{display:'flex', flexDirection:'column',width:"100%",margin:"10px 0px", height:"70px"}}>
                     <label className='signup_container_two_label'>Gender</label>

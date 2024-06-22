@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import './allPages.css'
 
 export const Navbar=()=>{
 
@@ -12,13 +13,21 @@ export const Navbar=()=>{
         navigate('/signUp')
     }
 
+    const handleHelpClick=()=>{
+        navigate('/help')
+    }
+
+    const handleHomelick=()=>{
+        navigate('/')
+    }
+
     return(
         <div className="nav_container_one">
             <div className="nav_container_one_buttonContainer">
-                <button className="nav_container_one_button">Home    <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button" onClick={handleHomelick}>Home    <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button" onClick={handleLoginClick}>Login   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button" onClick={handlesignUpClick}>SignUp  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">Contact <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button" onClick={handleHelpClick}> Help <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button">About   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
             </div>
             {/* <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}> */}

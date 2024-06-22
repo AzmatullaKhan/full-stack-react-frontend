@@ -1,3 +1,4 @@
+import './allPages.css'
 import { useNavigate } from 'react-router-dom'
 
 export const Login=()=>{
@@ -28,8 +29,8 @@ export const Login=()=>{
                 <button className='login_container_two_button'>Login</button>
                 <img src={require('../images/login-page.jpg')} alt='img' className='login_container_two_image'/>
                 <button className='login_container_two_button' onClick={handleHomeClick}>Home</button>
-            </div>
                 <img src={require('../images/login-page-side.jpg')} className='login_container_three_image' alt='img'/>
+            </div>
         </div>
     )
 }
