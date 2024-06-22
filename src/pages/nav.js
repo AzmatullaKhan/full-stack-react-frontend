@@ -3,13 +3,16 @@ export const Navbar=()=>{
     return(
         <div className="nav_container_one">
             <div className="nav_container_one_buttonContainer">
-                <button className="nav_container_one_button">Home<div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">Login<div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">SignUp<div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">Contact<div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">About<div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button">Home    <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button">Login   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button">SignUp  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button">Contact <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button">About   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
             </div>
-            {/* <img src={require("./home")} alt='logo' /> */}
+            {/* <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}> */}
+                {/* <input type="text" className="nav_container_one_input" placeholder="Want to know? Search here...🔎🔎"></input> */}
+                <img src={require("../images/bg1.png")} alt='logo' className="nav_container_one_logo"/>
+            {/* </div> */}
         </div>
     )
 }

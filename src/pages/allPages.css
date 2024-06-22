@@ -7,21 +7,24 @@
     position: sticky;
     top: 0px;
 }
+
+
 .nav_container_one_buttonContainer{
     padding: 12px;
     border-radius: 40px;
 }
 .nav_container_one_button:nth-child(5){
     margin:0px;
+    animation: none;
 }
 .nav_container_one_button{
     height:50px;
     width:120px;
     background-color: transparent;
     outline: none;
-    border: 1.5px solid #4c1489;
+    border: 1.5px solid #a7cede;
     border-radius: 12px;
-    margin:0px 12px 0px 0px;
+    margin:0px 20px 0px 0px;
     color: #000;
     cursor: pointer;
     backdrop-filter: blur(12px);
@@ -29,34 +32,96 @@
     font-variant: small-caps;
     overflow: hidden;
     transition: all 1.5s ease-out 0s;
-    animation: nav_container_one_button-animation 1.5s ease-out 0s;
-    position: sticky;
+    animation: nav_container_one_button-animation 1s ease-out 0s;
+
+}
+.nav_container_one_button:hover{
+    .nav_container_one_button_underline{
+        animation: nav_container_one_button_underline-animation 1.5s ease-out 0s;
+    }
 }
 @keyframes nav_container_one_button-animation {
     0%{width: 0px;}
     100%{width: 120px;}
 }
-.nav_container_one_p{
-    position:absolute;
-    top: 0;
-    color: #000;
+
+
+.nav_container_one_button_underline{
+    border: 1px solid #000;
+    position: absolute;
+    width: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #000;
+    height:25px;
+    left:39px;
+    width: inherit;
 }
+@keyframes nav_container_one_button_underline-animation {
+    0%{left:39px}
+    50%{left:139px;}
+    100%{left:39px}
+}
+
+
 .nav_container_one_button_div{
     position:absolute;
     border-radius: 0px;
     top: 0px;
     left: 0px;
-    background-color: #000;
+    background-color: #a7cede;
     height: inherit;
     width: 15px;
 }   
+
+
+.nav_container_one_input{
+    width:500px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #4c1489;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+    font-size: 16px;
+    backdrop-filter:blur(12px)
+}
+
+
+.nav_container_one_logo{
+    height:50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main_container_one{
     height: 850px;
     width:1492px;
     padding: 0px 0px;
-    background-image: url('../images/bg.jpeg');
+    background-color: #fff;
     background-size: cover;
+    backdrop-filter: grayscale(10px);
 }
 .main_container_two{
     height: 750px;
