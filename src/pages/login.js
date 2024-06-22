@@ -1,5 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 
 export const Login=()=>{
+
+    let navigate= useNavigate();
+
+    const handleHomeClick=()=>{
+        navigate('/');
+    }
+
     return (
         <div className="login_container_one">
             <img src={require('../images/login.png')} alt='img' className='login_container_one_image'/>
@@ -19,6 +27,7 @@ export const Login=()=>{
                 <button className='login_container_two_button_href'>forgot password? reset here</button>
                 <button className='login_container_two_button'>Login</button>
                 <img src={require('../images/login-page.jpg')} alt='img' className='login_container_two_image'/>
+                <button className='login_container_two_button' onClick={handleHomeClick}>Home</button>
             </div>
                 <img src={require('../images/login-page-side.jpg')} className='login_container_three_image' alt='img'/>
         </div>
