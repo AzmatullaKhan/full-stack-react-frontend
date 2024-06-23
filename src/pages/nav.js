@@ -21,6 +21,10 @@ export const Navbar=()=>{
         navigate('/')
     }
 
+    const handleAboutClick=()=>{
+        navigate('/about')
+    }
+
     return(
         <div className="nav_container_one">
             <div className="nav_container_one_buttonContainer">
@@ -28,7 +32,7 @@ export const Navbar=()=>{
                 <button className="nav_container_one_button" onClick={handleLoginClick}>Login   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button" onClick={handlesignUpClick}>SignUp  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button" onClick={handleHelpClick}> Help <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
-                <button className="nav_container_one_button">About   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                <button className="nav_container_one_button" onClick={handleAboutClick}>About   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
             </div>
             {/* <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}> */}
                 {/* <input type="text" className="nav_container_one_input" placeholder="Want to know? Search here...🔎🔎"></input> */}

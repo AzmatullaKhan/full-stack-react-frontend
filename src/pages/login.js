@@ -27,9 +27,9 @@ export const Login=()=>{
                 </div>
                 <button className='login_container_two_button_href'>forgot password? reset here</button>
                 <button className='login_container_two_button'>Login</button>
-                <img src={require('../images/login-page.jpg')} alt='img' className='login_container_two_image'/>
+                <img src={require('../images/login-page.png')} alt='img' className='login_container_two_image'/>
                 <button className='login_container_two_button' onClick={handleHomeClick}>Home</button>
-                <img src={require('../images/login-page-side.jpg')} className='login_container_three_image' alt='img'/>
+                <img src={require('../images/login-page-side.png')} className='login_container_three_image' alt='img'/>
             </div>
         </div>
     )

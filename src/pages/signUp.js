@@ -32,9 +32,9 @@ export const SignUp=()=>{
                     <label className='signup_container_two_label'>Username</label>
                     <input type="text" className='signup_container_two_input' placeholder='***** Enter name you want to register *****'/>
                 </div>
-                <div style={{display:'flex', flexDirection:'column', margin:"10px 0px", height:"70px"}}>
+                <div style={{display:'flex', flexDirection:'column', justifyContent:"flex-start",width:"100%", margin:"10px 0px", height:"70px"}}>
                     <label className='signup_container_two_label'>Password</label>
-                    <input type="text" className='signup_container_two_input' placeholder='***** Enter Password *****'/>
+                    <input type="text" className='signup_container_two_input_small' placeholder='***** Enter Password *****'/>
                 </div>
                 <div style={{display:'flex', flexDirection:'column', justifyContent:"flex-start",width:"100%",margin:"10px 0px", height:"70px"}}>
                     <label className='signup_container_two_label'>Number</label>
@@ -56,6 +56,8 @@ export const SignUp=()=>{
                     <button className='signup_container_two_button'>SignUp</button>
                     <button className='signup_container_two_button' onClick={handleHomeClick}>Home</button>
                 </div>
+                <br></br><br></br>
+                <span style={{width:"200px", alignSelf:"flex-start"}}>***** Get an account, and enjoy to your heart's content *****</span>
             </div>
         </div>
     )
