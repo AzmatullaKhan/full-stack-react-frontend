@@ -85,7 +85,6 @@ export const About=()=>{
                                 <h3 style={{textAlign:"right",fontWeight:"bolder", textDecoration:"underline"}}>- Santhosh</h3>
                             </p>
                         </div>
-                        <h2 style={{alignSelf:"flex-end",textAlign:"left",fontVariant:"small-caps", fontStyle:"italic", textDecoration:"underline",fontWeight:"500"}}>~Comments</h2>
                     </div>
                     <hr></hr>
                     <br></br>
