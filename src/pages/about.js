@@ -89,7 +89,7 @@ export const About=()=>{
                     <hr></hr>
                     <br></br>
                     <br></br>
-                    <h2 style={{textAlign:"center",fontVariant:"small-caps",fontWeight:"500"}}>Thank you this is all about our website 😌😌...</h2>
+                    <h2 style={{textAlign:"center",fontVariant:"small-caps",fontWeight:"500"}}>Thank you. This is all about our website 😌😌...</h2>
                 </div>
                 <img src={require('../images/about.png')} alt='img' className='about_container_two_image'/>
             </div>

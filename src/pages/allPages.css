@@ -324,6 +324,10 @@ hr{
     font-weight: bolder;
     font-variant: small-caps;
 }
+.signup_container_two_label_errormessage{
+    color: #ef0000;
+    font-weight: bolder;
+}
 
 .signup_container_two_input{
     width:476px;
@@ -452,6 +456,7 @@ hr{
     border-bottom-right-radius: 0px;
     line-height: 22px;
     margin-left: auto;
+    max-width: 300px;
 }
 
 .help_container_messageReceived{
@@ -461,6 +466,7 @@ hr{
     border-radius: 20px;
     border-top-left-radius: 0px;
     line-height: 22px;
+    max-width: 300px;
 }
 
 .help_container_questions_div{
