@@ -10,7 +10,7 @@ export const About=()=>{
                     <h1 style={{textAlign:"center", fontVariant:"small-caps", backdropFilter:"blur(12px)", fontWeight:"500", width:'100%', position:'sticky', top:"0"}}>About🤖</h1>
 
 
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className='about_container_three_left_scroll'>
                         <img src={require('../images/about-mission.png')} alt='img' className='about_container_three_description_images'/>
                         <p className='about_container_three_description'>
                         Our mission is to [briefly state your mission]. We strive to [explain how you aim to achieve your mission], 
@@ -23,7 +23,7 @@ export const About=()=>{
                     <hr></hr>
                     <br></br>
 
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className='about_container_three_right_scroll'>
                         <p className='about_container_three_description'>
                             Welcome to [Your Company Name], where passion meets innovation. Founded in [Year], we began 
                             with a simple vision: to create exceptional [products/services] that make a difference in the 
@@ -37,7 +37,7 @@ export const About=()=>{
                     <hr></hr>
                     <br></br>
 
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className='about_container_three_left_scroll'>
                         <img src={require('../images/about-ourcommitment.png')} alt='img' className='about_container_three_description_images_s'/>
                         <p className='about_container_three_description'>
                             At [Your Company Name], customer satisfaction is our top priority. We are committed to providing:
@@ -53,7 +53,7 @@ export const About=()=>{
                     <hr></hr>
                     <br></br>
 
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className='about_container_three_right_scroll'>
                         <p className='about_container_three_description'>
                             Our website's excellence is crafted by the talented [Developer's Name], who single-handedly brought our digital 
                             vision to life. With expertise in multiple programming languages, [Developer's Name] created a user-friendly and 
@@ -68,7 +68,7 @@ export const About=()=>{
                     <hr></hr>
                     <br></br>
 
-                    <div style={{display:"flex"}}>
+                    <div style={{display:"flex"}} className='about_container_three_left_scroll'>
                         <img src={require('../images/about-comments.png')} alt='img' className='about_container_three_description_images_s3'/>
                         <div className='about_container_three_description_comments_div'>
                             <p className='about_container_three_description_comments_p'>

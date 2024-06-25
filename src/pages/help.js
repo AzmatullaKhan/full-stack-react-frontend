@@ -92,10 +92,9 @@ export const Help=()=>{
                 <Navbar />
             </div>
             <div className='help_container_two'>
-                <img src={require('../images/help.png')} alt='img'/>
+                <img src={require('../images/help.png')} alt='img' className='help_container_two_img'/>
                 <div className='help_container_three'>
                     <div className='help_container_three_chat_div' id='help_container_three_chat_div'>
-
                     </div>
                     <div className='help_container_questions_div'>
                         <p className='help_container_questions_div_p' id='help_container_questions_div_p'>

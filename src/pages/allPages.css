@@ -164,6 +164,7 @@ hr{
     margin-left:1292px;
     transform: rotate(90deg);
 }
+
 .login_container_one_image:nth-child(3){
     margin-top:650px;
     transform: rotate(-90deg);
@@ -174,6 +175,7 @@ hr{
     margin-top: 650px;
     transform: rotate(180deg);
 }
+
 
 .login_container_two{
     height: 500px;
@@ -186,6 +188,11 @@ hr{
     align-items: center;
     flex-direction: column;
     padding: 12px;
+    animation: login_container_two-animation 1s ease-in-out 0s;
+}
+@keyframes login_container_two-animation {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 .login_container_two_label{
@@ -245,6 +252,11 @@ hr{
     margin-top: 300px;
     margin-left: -320px;
     width:200px;
+    animation: login_container_two_image-animation 1s ease-out 0s;
+}
+@keyframes login_container_two_image-animation {
+    0%{margin-left: -620px;opacity: 0;}
+    100%{margin-left: -320px;opacity: 1;}
 }
 
 .login_container_three_image{
@@ -255,8 +267,13 @@ hr{
     height:500px;
     width:250px;
     border-radius: 12px;
-}
+    animation: login_container_three_image-animation 1s ease-out 0s;
 
+}
+@keyframes login_container_three_image-animation {
+    0%{margin-left: 940px;opacity: 0;}
+    100%{margin-left: 640px;opacity: 1;}
+}
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -298,10 +315,15 @@ hr{
 .signup_container_one_image_signup{
     height:600px;
     width:600px;
-    margin:235px 0px 0px 800px;
+    margin:235px 0px 0px 750px;
     position: absolute;
     background-color: #fff;
     /* border: 1px solid; */
+    animation: signup_container_one_image_signup-animation 1s ease-out;
+}
+@keyframes signup_container_one_image_signup-animation {
+    0%{margin-left: 400px;opacity: 0;z-index: 2}
+    100%{margin-left:750px;opacity: 1;z-index: 2;}
 }
 
 .signup_container_two{
@@ -309,13 +331,18 @@ hr{
     width:500px;
     border:1px solid;
     margin-top:100px;
-    margin-left:550px;
+    margin-left:500px;
     border-radius: 12px;
     background-color: #fff;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 12px;
+    animation: signup_container_two-animation 1s ease-out 0s;
+}
+@keyframes signup_container_two-animation {
+    0%{position: relative;left:400px;opacity: 0;}
+    100%{position: relative;left:0px;opacity: 1;}
 }
 
 .signup_container_two_label{
@@ -323,6 +350,16 @@ hr{
     color: #4c1489;
     font-weight: bolder;
     font-variant: small-caps;
+    width: fit-content;
+    border-radius: 12px;
+    padding: 0px 10px;
+}
+@keyframes error_animation-animation {
+    0%{background-color: transparent;}
+    25%{background-color: #f18787;}
+    50%{background-color: transparent;}
+    75%{background-color: #f18787;}
+    100%{background-color: transparent;}
 }
 .signup_container_two_label_errormessage{
     color: #ef0000;
@@ -412,6 +449,13 @@ hr{
     align-items: center;
 }
 
+.help_container_two_img{
+    animation: help_container_two_img-animation 1s ease-out 0s;
+}
+@keyframes help_container_two_img-animation {
+    0%{position: relative; left:300px; opacity: 0;}
+    100%{position: relative; left: 0; opacity: 1;}
+}
 
 .help_container_three{
     height: 700px;
@@ -422,6 +466,11 @@ hr{
     border-radius: 22px;
     margin: 0px 40px;
     padding: 20px 40px;
+    animation: help_container_three-animation 1s ease-out 0s;
+}
+@keyframes help_container_three-animation {
+    0%{position: relative; right:300px; opacity: 0;}
+    100%{position: relative; right: 0; opacity: 1;}
 }
 .help_container_three_chat_div{
     height:500px;
@@ -525,13 +574,26 @@ hr{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.about_container_three_left_scroll{
+    animation: about_container_three_left-animation 1s ease-out 0s;
+}
+@keyframes about_container_three_left-animation {
+    0%{position: relative; left:-100px;opacity: 0;}
+    100%{position: relative; left:0px;opacity: 1;}
+}
+.about_container_three_right_scroll{
+    animation: about_container_three_right-animation 1s ease-out 0s;
+}
+@keyframes about_container_three_right-animation {
+    0%{position: relative; left:100px;opacity: 0;}
+    100%{position: relative; left:0px;opacity: 1;}
+}
 
 .about_container_two_image{
     pointer-events: none;
     height:650px;
     width:300px;
     margin-top: 80px;
-    /* border: 1px solid; */
     margin-left: -45px;
 }
 
@@ -552,8 +614,8 @@ hr{
 .about_container_three_description_images_s{
     height:200px;
     width: 250px;
-    /* border: 1px solid */
 }
+
 .about_container_three_description_images_s2{
     height:fit-content;
     width:fit-content
@@ -566,7 +628,6 @@ hr{
     font-style: oblique;
     line-height: 30px;
     font-size: 16px;
-    /* width:890px; */
 
 }
 .about_container_three_description_comments_div{
