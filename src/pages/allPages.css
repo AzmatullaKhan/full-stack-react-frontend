@@ -344,6 +344,9 @@ hr{
     0%{position: relative;left:400px;opacity: 0;}
     100%{position: relative;left:0px;opacity: 1;}
 }
+.signup_container_two_hidden{
+    display: none;
+}
 
 .signup_container_two_label{
     font-size: 20px;
@@ -353,6 +356,19 @@ hr{
     width: fit-content;
     border-radius: 12px;
     padding: 0px 10px;
+}
+.signup_container_two_input_small_eye{
+    text-align: center;
+    cursor: pointer;
+    font-style: italic;
+    position: relative;
+    top:-35px;
+    left: 250px;
+    height:20px;
+    width:20px;
+    font-weight: 100;
+    color: #000;
+    font-size: 16px;
 }
 @keyframes error_animation-animation {
     0%{background-color: transparent;}
@@ -421,7 +437,78 @@ hr{
     color: #fff;
 }
 
+.signup_container_three_hidden{
+    display: none;
+}
+.signup_container_three_visible{
+    position:absolute;
+    /* display: block; */
+    top:0px;
+    margin:200px 0px 0px 475px;
+    border-radius:12px;
+    height:400px;
+    width: 600px;
+    border:2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.signup_container_three_button_close{
+    height:50px;
+    width:50px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid ;
+    border-radius: 12px;
+    margin:10px 10px;
+    color: #000;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    font-size: 20px;
+    font-variant: small-caps;
+    overflow: hidden;
+    position: absolute;
+    margin:-340px 0px 0px 540px;
+    transition: all 0.4s ease-out;
+    font-size: 30px;
+}
+.signup_container_three_button_close:hover{
+    background-color: #eb4c4c;
+    border: none;
+}
 
+.signup_container_three_input{
+    margin:5px;
+    height:30px;
+    width:30px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    border:1px solid;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+.signup_container_three_button{
+    height:50px;
+    width:100px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #4c1489;
+    border-radius: 12px;
+    margin:10px 0px 0px 30px;
+    color: #000;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    font-size: 20px;
+    font-variant: small-caps;
+    overflow: hidden;   
+    transition: all 0.2s ease-in;
+}
+.signup_container_three_button:hover{
+    background-color: #4c1489;
+    color: #fff;
+}
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
