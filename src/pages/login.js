@@ -8,6 +8,9 @@ export const Login=()=>{
     const handleHomeClick=()=>{
         navigate('/');
     }
+    const handleReesetClick=()=>{
+        navigate('/resetPassword')
+    }
 
     return (
         <div className="login_container_one">
@@ -25,7 +28,7 @@ export const Login=()=>{
                     <label className='login_container_two_label'>Password</label>
                     <input type="password" className='login_container_two_input' placeholder='***** Enter the respective password *****'/>
                 </div>
-                <button className='login_container_two_button_href'>forgot password? reset here</button>
+                <button className='login_container_two_button_href' onClick={handleReesetClick}>forgot password? reset here</button>
                 <button className='login_container_two_button'>Login</button>
                 <img src={require('../images/login-page.png')} alt='img' className='login_container_two_image'/>
                 <button className='login_container_two_button' onClick={handleHomeClick}>Home</button>
