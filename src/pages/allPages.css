@@ -362,7 +362,7 @@ hr{
     cursor: pointer;
     font-style: italic;
     position: relative;
-    top:-35px;
+    top:-20px;
     left: 250px;
     height:20px;
     width:20px;
@@ -774,9 +774,11 @@ hr{
     transform: rotate(180deg);
 }
 
-
+.resetPassword_container_two_hidden{
+    display: none;
+}
 .resetPassword_container_two{
-    height: 300px;
+    height: 350px;
     width:400px;
     border:1px solid;
     margin:250px auto  0px auto;
@@ -892,6 +894,85 @@ hr{
     align-items: center;
     flex-direction: column;
 }
-.resetPassword_container_two_hidden{
+.resetPassword_container_four_hidden{
     display: none;
+}
+
+
+.resetPassword_container_four_visible{
+    height: 300px;
+    width:400px;
+    border:1px solid;
+    margin:250px auto  0px auto;
+    border-radius: 12px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    animation: resetPassword_container_four_visible-animation 1s ease-in-out 0s;
+}
+@keyframes resetPassword_container_four_visible-animation {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.resetPassword_container_four_label{
+    font-size: 20px;
+    color: #4c1489;
+    font-weight: bolder;
+    font-variant: small-caps;
+    width: 170px;
+    padding: 0px 5px;
+    margin: 10px 0px;
+    border-radius: 12px;
+}
+
+.resetPassword_container_four_input{
+    width:376px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #4c1489;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+}
+
+.resetPassword_container_four_button{
+    height:50px;
+    width:120px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #4c1489;
+    border-radius: 12px;
+    margin:20px 0px 0px 120px;
+    color: #000;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    font-size: 20px;
+    font-variant: small-caps;
+    overflow: hidden;   
+    transition: all 0.2s ease-in;
+}
+.resetPassword_container_four_button:hover{
+    background-color: #4c1489;
+    color: #fff;
+}
+
+.resetPassword_container_four_input_small_eye{
+    text-align: center;
+    cursor: pointer;
+    font-style: italic;
+    position: relative;
+    top:-20px;
+    left: 350px;
+    height:20px;
+    width:20px;
+    font-weight: 100;
+    color: #000;
+    font-size: 16px;
 }

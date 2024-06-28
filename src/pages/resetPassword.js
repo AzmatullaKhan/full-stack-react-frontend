@@ -32,6 +32,74 @@ export const ResetPassword=()=>{
 
     const otpValidation=(e)=>{
         e.preventDefault()
+        let v1=document.getElementById('resetPassword_container_three_input1').value
+        let v2=document.getElementById('resetPassword_container_three_input2').value
+        let v3=document.getElementById('resetPassword_container_three_input3').value
+        let v4=document.getElementById('resetPassword_container_three_input4').value
+
+        if(v1==='1' && v2==='2' && v3==='3' && v4==='4'){
+            document.getElementById('resetPassword_container_four').className='resetPassword_container_four_visible'
+            document.getElementById('resetPassword_container_three').className='resetPassword_container_three_hidden'
+        }
+    }
+
+    const handleLoginClick=()=>{
+        navigate('/login')
+    }
+
+    const handleOtpChange=(e)=>{
+        if(e.target.value>='0' && e.target.value<='9'){
+            e.target.type='text'; 
+            setTimeout(()=>{e.target.type='password'}, 1000)
+        }
+        else{
+            e.target.value=''
+        }
+    }
+
+    function validatePassword(pass){
+        let cap=Number(0);
+        let sp=Number(0);
+        let num=Number(0);
+        for(let i=0;i<pass.length;i++){
+            if((pass[i]>='A' && pass[i]<='Z') && !cap)
+                cap=1;
+            if((pass[i]==='@' || pass[i]==='#' || pass[i]==='$' || pass[i]==='_' || pass[i]==='&') && !sp)
+                sp=1;
+            else if((pass[i]>='0' && pass[i]<='9') && !num)
+                num=1;
+        }
+        return (cap && sp && num)
+    }
+
+    const handleChangePasswordValidation=(e)=>{
+        e.preventDefault()
+
+        let pass=validatePassword(document.getElementById('resetPassword_changePassword').value)
+
+        if(pass){
+            navigate('/login')
+        }
+
+        if(!pass){
+            document.getElementById('resetPassword_change_password_label').style.animation='error_animation-animation 1s ease-in-out 0s'
+            setTimeout(()=>{
+                document.getElementById('resetPassword_change_password_label').style.animation=''
+            },2000)
+        }
+    }
+
+    const handleEyeClick=()=>{
+        let t=document.getElementById('resetPassword_changePassword').type
+        if(t==='password'){
+            document.getElementById('resetPassword_changePassword').type='text'
+            document.getElementById('resetPassword_container_four_input_small_eye_cross').style.opacity=0;
+        }
+        else{
+            document.getElementById('resetPassword_changePassword').type='password'
+            document.getElementById('resetPassword_container_four_input_small_eye_cross').style.opacity=1;  
+        }
+        console.log()
     }
 
     return(
@@ -48,6 +116,7 @@ export const ResetPassword=()=>{
                         <input type="text" className='resetPassword_container_two_input' id='resetPassword_number' onChange={validateNumber} maxLength={10} minLength={10} placeholder='***** Enter your registered  mobile Number here *****' required/>
                     </div>
                     <button className='resetPassword_container_two_button'>Send OTP</button>
+                    <button className='resetPassword_container_two_button' onClick={handleLoginClick}>Back to Login</button>
                 </form>
             </div>
             <div className='resetPassword_container_three_hidden' id='resetPassword_container_three'>
@@ -57,13 +126,25 @@ export const ResetPassword=()=>{
                 <p>* Might take some while to receive a OTP</p>
                 <form onSubmit={otpValidation}>
                     <div style={{display:'flex'}}>
-                        <input type='text' className='resetPassword_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                        <input type='text' className='resetPassword_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                        <input type='text' className='resetPassword_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                       <input type='text' className='resetPassword_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
+                        <input type='text' className='resetPassword_container_three_input' onChange={handleOtpChange} id='resetPassword_container_three_input1' minLength={1} maxLength={1} required/>
+                        <input type='text' className='resetPassword_container_three_input' onChange={handleOtpChange} id='resetPassword_container_three_input2' minLength={1} maxLength={1} required/>
+                        <input type='text' className='resetPassword_container_three_input' onChange={handleOtpChange} id='resetPassword_container_three_input3' minLength={1} maxLength={1} required/>
+                        <input type='text' className='resetPassword_container_three_input' onChange={handleOtpChange} id='resetPassword_container_three_input4' minLength={1} maxLength={1} required/>
                     </div>
                     <button className='signup_container_three_button' type='submit'>Submit</button>
                  </form>
+            </div>
+
+            <div className='resetPassword_container_four_hidden' id='resetPassword_container_four'>
+                <h1>Change Password 😵</h1>
+                <form onSubmit={handleChangePasswordValidation}>
+                    <div style={{display:'flex', flexDirection:'column', margin:"10px 0px", height:"70px"}}>
+                        <label className='resetPassword_container_four_label' id='resetPassword_change_password_label'>Enter New Password</label>
+                        <input type="password" className='resetPassword_container_four_input' id='resetPassword_changePassword' placeholder='***** Enter your new Password *****' required/>
+                        <div className='resetPassword_container_four_input_small_eye' onClick={handleEyeClick}>👁️<p id='resetPassword_container_four_input_small_eye_cross' style={{position:'relative', top:'-32px', left:'3px', fontSize:"24px", opacity:'1', marginTop:"7px"}}>/</p></div>
+                    </div>
+                    <button className='resetPassword_container_four_button'>Set Password</button>
+                </form>
             </div>
         </div>
     )

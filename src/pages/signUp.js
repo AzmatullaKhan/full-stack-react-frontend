@@ -101,6 +101,16 @@ export const SignUp=()=>{
         }
         console.log()
     }
+
+    const handleOtpChange=(e)=>{
+        if(e.target.value>='0' && e.target.value<='9'){
+            e.target.type='text'; 
+            setTimeout(()=>{e.target.type='password'}, 1000)
+        }
+        else{
+            e.target.value=''
+        }
+    }
     
     return(
         <div className="signup_container_one">
@@ -119,7 +129,7 @@ export const SignUp=()=>{
                     <div style={{display:'flex', flexDirection:'column', justifyContent:"flex-start",width:"100%", margin:"10px 0px", height:"70px"}}>
                         <label className='signup_container_two_label' id='password_label'>Password</label>
                         <input type="password" className='signup_container_two_input_small' placeholder='***** Enter Password *****' required id='signup_password' minLength={8}/>
-                        <p className='signup_container_two_input_small_eye' onClick={handleEyeClick}>👁️<p id='signup_container_two_input_small_eye_cross' style={{position:'relative', top:'-48px', left:'2px', fontSize:"24px", opacity:'1'}}>/</p></p>
+                        <div className='signup_container_two_input_small_eye' onClick={handleEyeClick}>👁️<p id='signup_container_two_input_small_eye_cross' style={{position:'relative', top:'-32px', left:'3px', fontSize:"24px", opacity:'1', marginTop:"7px"}}>/</p></div>
                     </div>
                     <div style={{display:'flex', flexDirection:'column', justifyContent:"flex-start",width:"100%",margin:"10px 0px", height:"70px"}}>
                         <div><label className='signup_container_two_label' id='number_label'>Number</label><span className='signup_container_two_label_errormessage'> *Only Numbers(0-9)</span></div>
@@ -148,14 +158,14 @@ export const SignUp=()=>{
             <div className='signup_container_three_hidden' id='signup_container_three'>
                 <button className='signup_container_three_button_close' type='button' onClick={()=>{window.location.reload()}}>X</button>
                 <h2>OTP has been sent to the number ending </h2>
-                <h2 style={{marginTop:'-12px', display:'flex', alignItems:'center'}}>with ***** ** <p id='signup_container_three_numberLast'></p> ✅</h2>
+                <h2 style={{marginTop:'-12px', display:'flex', alignItems:'center'}}>with ***** **<p id='signup_container_three_numberLast'></p> ✅</h2>
                 <p>* Might take some while to receive a OTP</p>
                 <form onSubmit={otpValidation}>
                     <div style={{display:'flex'}}>
-                        <input type='text' className='signup_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                        <input type='text' className='signup_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                        <input type='text' className='signup_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
-                       <input type='text' className='signup_container_three_input' onChange={(e)=>{e.target.type='text'; setTimeout(()=>{e.target.type='password'}, 1000)}} minLength={1} maxLength={1} required/>
+                        <input type='text' className='signup_container_three_input' onChange={handleOtpChange} minLength={1} maxLength={1} required/>
+                        <input type='text' className='signup_container_three_input' onChange={handleOtpChange} minLength={1} maxLength={1} required/>
+                        <input type='text' className='signup_container_three_input' onChange={handleOtpChange} minLength={1} maxLength={1} required/>
+                       <input type='text' className='signup_container_three_input' onChange={handleOtpChange} minLength={1} maxLength={1} required/>
                     </div>
                     <button className='signup_container_three_button' type='submit'>Submit</button>
                  </form>
