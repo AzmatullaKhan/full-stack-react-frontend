@@ -56,9 +56,11 @@ export const SignUp=()=>{
     } 
 
     const validateName=(e)=>{
+        let signup_username= document.getElementById('signup_username')
         let char=e.target.value;
         char=char[char.length-1]
         if(!((char>='a' && char<='z') ||(char>='A' && char<='Z')|| (char>='0' && char<='9') || char==='@' || char==='$' || char==='_')){
+            signup_username.value=signup_username.value.slice(0, signup_username.value.length-1);
             document.getElementById('username_label').style.animation='error_animation-animation 1s ease-in-out 0s'
             setTimeout(()=>{
                 document.getElementById('username_label').style.animation=''
