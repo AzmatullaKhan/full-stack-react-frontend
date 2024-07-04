@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './allPages.css'
+import axios from "axios"
 
 export const ResetPassword=()=>{
 
@@ -25,9 +26,22 @@ export const ResetPassword=()=>{
 
     const validate=(e)=>{
         e.preventDefault();
+        let mobileNumber = document.getElementById('resetPassword_number').value
 
-        document.getElementById('resetPassword_container_three').className='resetPassword_container_three_visible'
-        document.getElementById('resetPassword_container_two').className='resetPassword_container_two_hidden'
+        axios.post('http://localhost:5000/loginServer/getUserDetailsMobile',{
+            mobileNumber
+        }).then(res=>{localStorage.setItem('isValidUserNumber', (res.data.message))})
+        .catch(err=>{localStorage.setItem('isValidUserNumber', err.message)})
+
+        setTimeout(()=>{
+            let isValid=(localStorage.getItem('isValidUserNumber'))
+            if(isValid==="proceed"){
+                document.getElementById('resetPassword_container_three').className='resetPassword_container_three_visible'
+                document.getElementById('resetPassword_container_two').className='resetPassword_container_two_hidden'
+            }
+            else
+                alert("The mobile number entered isn't registerd to any account. Try SignUp")
+        },100)
     }
 
     const otpValidation=(e)=>{
@@ -41,6 +55,8 @@ export const ResetPassword=()=>{
             document.getElementById('resetPassword_container_four').className='resetPassword_container_four_visible'
             document.getElementById('resetPassword_container_three').className='resetPassword_container_three_hidden'
         }
+        else
+            alert('Enter the correct OTP, hint:1234')
     }
 
     const handleLoginClick=()=>{
@@ -78,6 +94,15 @@ export const ResetPassword=()=>{
         let pass=validatePassword(document.getElementById('resetPassword_changePassword').value)
 
         if(pass){
+            let password = document.getElementById('resetPassword_changePassword').value
+            let mobileNumber= document.getElementById('resetPassword_number').value
+
+            axios.post('http://localhost:5000/loginServer/updaePassword',{
+                mobileNumber, password
+            })
+            .then(res=>{console.log(res)})
+            .catch(err=>{console.log(err)})
+            
             navigate('/login')
         }
 

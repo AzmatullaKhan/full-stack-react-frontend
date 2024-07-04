@@ -159,7 +159,7 @@ export const SignUp=()=>{
             navigate('/login')
         }
         else{
-            alert('Enter Correct OTP, hint:1,2,3,4')
+            alert('Enter Correct OTP, hint:1234')
         }
 
     }
