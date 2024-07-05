@@ -39,6 +39,10 @@ export const Navbar=()=>{
         window.location.reload()
     }
 
+    const handleProfileClick=()=>{
+        navigate('/profile')
+    }
+
 
     return(
         <div className="nav_container_one">
@@ -49,11 +53,20 @@ export const Navbar=()=>{
                     (<button className="nav_container_one_button" onClick={handleLogoutClick}>Logout   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>):
                     (<button className="nav_container_one_button" onClick={handleLoginClick}>Login   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>)
                 }
-                <button className="nav_container_one_button" onClick={handlesignUpClick}>SignUp  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
+                {
+                    isLoggedIn?
+                    (<button className="nav_container_one_button" onClick={handlesignUpClick}>SomeBut  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>):
+                    (<button className="nav_container_one_button" onClick={handlesignUpClick}>SignUp  <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>)
+
+                }
                 <button className="nav_container_one_button" onClick={handleHelpClick}> Help <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
                 <button className="nav_container_one_button" onClick={handleAboutClick}>About   <span className="nav_container_one_button_underline"></span> <div className="nav_container_one_button_div"></div></button>
             </div>
-                <img src={require("../images/bg1.png")} alt='logo' className="nav_container_one_logo"/>
+                {
+                    isLoggedIn?
+                    (<img src={require("../images/bg1.png")} alt='logo' onClick={handleProfileClick} className="nav_container_one_logo"/>):
+                    (<img src={require("../images/bg1.png")} alt='logo' className="nav_container_one_logo"/>)
+                }
         </div>
     )
 }
