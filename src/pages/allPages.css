@@ -995,3 +995,83 @@ hr{
     color: #000;
     font-size: 16px;
 }
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+.profile_container_one{
+    height: 850px;
+    width:1492px;
+    padding: 0px 0px;
+    background-color: #fff;
+    background-size: cover;
+    backdrop-filter: grayscale(10px);   
+}
+.profile_container_two_image{
+    animation: profile_container_two-animation 1.4s ease-in-out 0s;
+}
+@keyframes profile_container_two-animation {
+    0%{position: relative;left: 500px;}
+    100%{position: relative;left: 0px;}
+}
+.profile_container_two{
+    height: 770px;
+    width:1492px;
+    padding: 0px 0px;
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_container_three{
+    height: 700px;
+    width:500px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    animation: profile_container_three-animation 1.4s ease-in-out 0s;
+}
+@keyframes profile_container_three-animation {
+    0%{position: relative;left: -400px;}
+    100%{position: relative;left: 0px;}
+}
+.profile_container_three_label{
+    font-size: 18px;
+    font-variant: small-caps;
+}
+.profile_container_three_input{
+    height: 40px;
+    max-width:fit-content;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    font-weight: bolder;
+    outline: none;
+    background-color: transparent;
+}
+.profile_container_thre_input_eye{
+    text-align: center;
+    cursor: pointer;
+    font-style: italic;
+    position: relative;
+    top:-50px;
+    left: 165px;
+    height:20px;
+    width:20px;
+    font-weight: 100;
+    color: #000;
+    font-size: 16px;
+}

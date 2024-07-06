@@ -124,7 +124,6 @@ export const ResetPassword=()=>{
             document.getElementById('resetPassword_changePassword').type='password'
             document.getElementById('resetPassword_container_four_input_small_eye_cross').style.opacity=1;  
         }
-        console.log()
     }
 
     return(

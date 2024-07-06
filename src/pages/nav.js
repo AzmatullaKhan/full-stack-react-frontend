@@ -3,7 +3,6 @@ import './allPages.css'
 
 export const Navbar=()=>{
     let isLoggedIn = Boolean(localStorage.getItem('isLoggedIn'))
-    console.log(isLoggedIn)
 
     let navigate=useNavigate();
 
@@ -36,7 +35,7 @@ export const Navbar=()=>{
         localStorage.removeItem('error')
         localStorage.removeItem('isLoggedIn')
 
-        window.location.reload()
+        navigate('/login')
     }
 
     const handleProfileClick=()=>{

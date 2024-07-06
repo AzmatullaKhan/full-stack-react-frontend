@@ -69,9 +69,9 @@ export const SignUp=()=>{
     }
 
     function getGender(){
-        if(document.getElementById('signup_genderMale').isChecked)
+        if(document.getElementById('signup_genderMale').checked)
             return 'Male'
-        else if(document.getElementById('signup_genderFemale').isChecked)
+        else if(document.getElementById('signup_genderFemale').checked)
             return 'Female'
         else
             return 'Others'
