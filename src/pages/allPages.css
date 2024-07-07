@@ -1075,3 +1075,21 @@ hr{
     color: #000;
     font-size: 16px;
 }
+
+.profile_container_three_button{
+    height:50px;
+    width:120px;
+    background-color: transparent;
+    outline: none;
+    border: 1.5px solid #4c1489;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    font-size: 20px;
+    font-variant: small-caps;
+    overflow: hidden;   
+}
+.profile_container_three_button_hidden{
+    display: none;
+}
